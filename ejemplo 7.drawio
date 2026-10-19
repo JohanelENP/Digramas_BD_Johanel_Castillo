@@ -1,0 +1,158 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram id="diagram_discos_musicales" name="Diagrama ER - Discos Musicales">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="720" background="#F8FAFC" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- TITULO PRINCIPAL -->
+        <mxCell id="title_1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#0F172A;" value="&lt;b&gt;DIAGRAMA ENTIDAD - RELACIÓN: DISCOS MUSICALES (EJERCICIO 7)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="850" x="250" y="25" as="geometry" />
+        </mxCell>
+
+        <!-- ================= ENTIDAD 1: GÉNERO MUSICAL ================= -->
+        <mxCell id="ent_genero" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFBF1;strokeColor=#0D9488;strokeWidth=2;fontColor=#0F766E;fontSize=14;fontStyle=1;shadow=1;" value="&lt;b&gt;GÉNERO_MUSICAL&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="170" x="545" y="120" as="geometry" />
+        </mxCell>
+        <!-- Atributos Género Musical -->
+        <mxCell id="attr_gen_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;fontStyle=4;fontColor=#1E293B;" value="&lt;u&gt;id_genero&lt;/u&gt;" vertex="1">
+          <mxGeometry height="36" width="105" x="460" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_gen_id" edge="1" parent="1" source="ent_genero" style="endArrow=none;html=1;rounded=0;strokeColor=#94A3B8;strokeWidth=1;" target="attr_gen_id" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_gen_nom" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;fontStyle=0;fontColor=#1E293B;" value="nombre_genero" vertex="1">
+          <mxGeometry height="36" width="115" x="660" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_gen_nom" edge="1" parent="1" source="ent_genero" style="endArrow=none;html=1;rounded=0;strokeColor=#94A3B8;strokeWidth=1;" target="attr_gen_nom" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ================= RELACIÓN: CLASIFICA (GÉNERO - DISCO) ================= -->
+        <mxCell id="rel_clasifica" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#475569;fontColor=#0F172A;fontSize=12;fontStyle=1;shadow=1;" value="&lt;b&gt;CLASIFICA&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="130" x="565" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_gen_clas" edge="1" parent="1" source="ent_genero" style="endArrow=none;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;" target="rel_clasifica" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_gen_clas" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1E293B;" value="1" vertex="1">
+          <mxGeometry height="20" width="30" x="640" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_clas_disco" edge="1" parent="1" source="rel_clasifica" style="endArrow=none;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;" target="ent_disco" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_clas_disco" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1E293B;" value="N" vertex="1">
+          <mxGeometry height="20" width="30" x="640" y="325" as="geometry" />
+        </mxCell>
+
+        <!-- ================= ENTIDAD 2: CANTANTE ================= -->
+        <mxCell id="ent_cantante" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontColor=#1E40AF;fontSize=14;fontStyle=1;shadow=1;" value="&lt;b&gt;CANTANTE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="90" y="380" as="geometry" />
+        </mxCell>
+        <!-- Atributos Cantante -->
+        <mxCell id="attr_cant_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;fontStyle=4;fontColor=#1E293B;" value="&lt;u&gt;id_cantante&lt;/u&gt;" vertex="1">
+          <mxGeometry height="36" width="105" x="30" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_cant_id" edge="1" parent="1" source="ent_cantante" style="endArrow=none;html=1;rounded=0;strokeColor=#94A3B8;strokeWidth=1;" target="attr_cant_id" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_cant_nom" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;fontStyle=0;fontColor=#1E293B;" value="nombre" vertex="1">
+          <mxGeometry height="36" width="95" x="160" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_cant_nom" edge="1" parent="1" source="ent_cantante" style="endArrow=none;html=1;rounded=0;strokeColor=#94A3B8;strokeWidth=1;" target="attr_cant_nom" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_cant_pais" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;fontStyle=0;fontColor=#1E293B;" value="pais" vertex="1">
+          <mxGeometry height="36" width="95" x="117.5" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_cant_pais" edge="1" parent="1" source="ent_cantante" style="endArrow=none;html=1;rounded=0;strokeColor=#94A3B8;strokeWidth=1;" target="attr_cant_pais" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ================= RELACIÓN: PERTENECE / GRABA (CANTANTE - DISCO) ================= -->
+        <mxCell id="rel_pertenece" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#475569;fontColor=#0F172A;fontSize=12;fontStyle=1;shadow=1;" value="&lt;b&gt;PERTENECE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="130" x="320" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_cant_pert" edge="1" parent="1" source="ent_cantante" style="endArrow=none;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;" target="rel_pertenece" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_cant_pert" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1E293B;" value="1" vertex="1">
+          <mxGeometry height="20" width="30" x="255" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_pert_disco" edge="1" parent="1" source="rel_pertenece" style="endArrow=none;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;" target="ent_disco" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_pert_disco" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1E293B;" value="N" vertex="1">
+          <mxGeometry height="20" width="30" x="485" y="385" as="geometry" />
+        </mxCell>
+
+        <!-- ================= ENTIDAD 3: DISCO ================= -->
+        <mxCell id="ent_disco" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontColor=#92400E;fontSize=14;fontStyle=1;shadow=1;" value="&lt;b&gt;DISCO&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="550" y="380" as="geometry" />
+        </mxCell>
+        <!-- Atributos Disco -->
+        <mxCell id="attr_disco_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;fontStyle=4;fontColor=#1E293B;" value="&lt;u&gt;id_disco&lt;/u&gt;" vertex="1">
+          <mxGeometry height="36" width="105" x="430" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_disco_id" edge="1" parent="1" source="ent_disco" style="endArrow=none;html=1;rounded=0;strokeColor=#94A3B8;strokeWidth=1;" target="attr_disco_id" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_disco_tit" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;fontStyle=0;fontColor=#1E293B;" value="titulo" vertex="1">
+          <mxGeometry height="36" width="95" x="582.5" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_disco_tit" edge="1" parent="1" source="ent_disco" style="endArrow=none;html=1;rounded=0;strokeColor=#94A3B8;strokeWidth=1;" target="attr_disco_tit" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_disco_pre" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;fontStyle=0;fontColor=#1E293B;" value="precio" vertex="1">
+          <mxGeometry height="36" width="95" x="700" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_disco_pre" edge="1" parent="1" source="ent_disco" style="endArrow=none;html=1;rounded=0;strokeColor=#94A3B8;strokeWidth=1;" target="attr_disco_pre" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ================= RELACIÓN: CONTIENE (DISCO - CANCIÓN) ================= -->
+        <mxCell id="rel_contiene" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#9333EA;fontColor=#6B21A8;fontSize=12;fontStyle=1;shadow=1;" value="&lt;b&gt;CONTIENE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="130" x="795" y="380" as="geometry" />
+        </mxCell>
+        <!-- Atributo en la relación CONTIENE: posicion -->
+        <mxCell id="attr_posicion" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9333EA;fontSize=11;fontStyle=0;fontColor=#1E293B;" value="posicion" vertex="1">
+          <mxGeometry height="36" width="95" x="812.5" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_rel_pos" edge="1" parent="1" source="rel_contiene" style="endArrow=none;html=1;rounded=0;strokeColor=#C084FC;strokeWidth=1;" target="attr_posicion" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_disco_cont" edge="1" parent="1" source="ent_disco" style="endArrow=none;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;" target="rel_contiene" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_disco_cont" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1E293B;" value="N" vertex="1">
+          <mxGeometry height="20" width="30" x="735" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_cont_canc" edge="1" parent="1" source="rel_contiene" style="endArrow=none;html=1;rounded=0;strokeColor=#475569;strokeWidth=2;" target="ent_cancion" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_cont_canc" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1E293B;" value="M" vertex="1">
+          <mxGeometry height="20" width="30" x="955" y="385" as="geometry" />
+        </mxCell>
+
+        <!-- ================= ENTIDAD 4: CANCIÓN ================= -->
+        <mxCell id="ent_cancion" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E7FF;strokeColor=#4F46E5;strokeWidth=2;fontColor=#3730A3;fontSize=14;fontStyle=1;shadow=1;" value="&lt;b&gt;CANCIÓN&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="1010" y="380" as="geometry" />
+        </mxCell>
+        <!-- Atributos Canción -->
+        <mxCell id="attr_canc_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;fontStyle=4;fontColor=#1E293B;" value="&lt;u&gt;id_cancion&lt;/u&gt;" vertex="1">
+          <mxGeometry height="36" width="105" x="970" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_canc_id" edge="1" parent="1" source="ent_cancion" style="endArrow=none;html=1;rounded=0;strokeColor=#94A3B8;strokeWidth=1;" target="attr_canc_id" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_canc_tit" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;fontStyle=0;fontColor=#1E293B;" value="titulo" vertex="1">
+          <mxGeometry height="36" width="95" x="1105" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_canc_tit" edge="1" parent="1" source="ent_cancion" style="endArrow=none;html=1;rounded=0;strokeColor=#94A3B8;strokeWidth=1;" target="attr_canc_tit" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
